@@ -37,3 +37,14 @@ Python 3.10 이상을 권장합니다. 외부 API 키나 실서비스 계정이 
 - [전체 인턴 및 프로젝트 목록](https://github.com/Luriar/dinostudio-internship-portfolio)
 
 **주의:** 이 공개 코드는 기존 회사 프로젝트를 이전하거나 일부 수정하여 공개한 것이 아닙니다. 실제 업무 수행 내용은 설명하되 고객 데이터나 정량 성과를 공개하지 않습니다.
+
+## 확장 HC 및 Extra HC 이력 데모
+
+`history_engine.py`는 가상 게시물 반응 데이터를 날짜별 스냅샷으로 저장하고 중복 수집을 방지합니다. 독립적으로 집계한 관찰치의 변화와 CSV 결과를 살펴볼 수 있습니다. 실제 플랫폼 접속이나 고객 정보 수집은 하지 않습니다.
+
+```bash
+python run_history.py --db synthetic_history.sqlite --export history_export.csv
+python -m unittest discover -s tests -v
+```
+
+[파이프라인 설계](docs/PIPELINE.md). 비교 수치는 시뮬레이션이며 실제 업무 성과가 아닙니다.
